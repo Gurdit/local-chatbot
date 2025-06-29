@@ -1,0 +1,59 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening", "What's up?", "Yo"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! What can I do for you?", "Hey! Need any help?"],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you", "Catch you later", "Talk to you soon"],
+      "responses": ["Goodbye!", "Take care!", "See you next time!"],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "Thanks a lot", "Appreciate it", "Cheers"],
+      "responses": ["You're welcome!", "No problem!", "Glad to help!", "Anytime!"],
+      "context": [""]
+    },
+    {
+      "tag": "query",
+      "patterns": ["What color is the sky?", "Tell me the color of the sky", "Sky color?"],
+      "responses": ["The sky is usually blue during the day."],
+      "context": [""]
+    },
+    {
+      "tag": "weather",
+      "patterns": ["What's the weather like?", "Tell me the weather", "Is it sunny today?", "Is it going to rain?"],
+      "responses": ["I can't give real-time weather, but I recommend checking a weather app!"],
+      "context": [""]
+    },
+    {
+      "tag": "joke",
+      "patterns": ["Tell me a joke", "Make me laugh", "Do you know any jokes?", "Say something funny"],
+      "responses": [
+        "Why did the computer go to the doctor? Because it had a virus!",
+        "Why don’t scientists trust atoms? Because they make up everything!",
+        "Why was the math book sad? It had too many problems."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "name",
+      "patterns": ["What's your name?", "Who are you?", "Can you tell me your name?"],
+      "responses": ["I'm your friendly chatbot assistant!", "You can call me MiniGPT!", "I'm just your helpful AI friend."],
+      "context": [""]
+    },
+    {
+      "tag": "help",
+      "patterns": ["I need help", "Can you help me?", "What can you do?", "Show me options"],
+      "responses": [
+        "Sure! I can answer questions, tell jokes, provide info, and chat with you. What would you like?",
+        "I'm here to help. Ask me anything!"
+      ],
+      "context": [""]
+    }
+  ]
+}
