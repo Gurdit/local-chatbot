@@ -3,16 +3,26 @@ import json
 import pickle
 import numpy as np
 import nltk
+import os
 
 from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
 
+base_dir = os.path.dirname(os.path.abspath(__file__))
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('C:\Simplilearn\Python\Python projects\chatbot using python\chatbot\intents.json').read())
+intents = json.loads(open(os.path.join(base_dir,'intents.json')).read())
 
-words = pickle.load(open('words.pkl', 'rb'))
-classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('chatbot_model.h5')
+words_file = os.path.join(base_dir, 'words.pkl')
+classes_file = os.path.join(base_dir, 'classes.pkl')
+words = pickle.load(open(words_file, 'rb'))
+classes = pickle.load(open(classes_file, 'rb'))
+
+try:
+    model_file = os.path.join(base_dir,'chatbot_model.keras')
+    model = load_model(model_file)
+except Exception as e:
+    print(f"Error loading model: {e}")
+    exit()
 
 
 def clean_up_sentence(sentence):
@@ -57,7 +67,17 @@ def get_response(intents_list, intents_json):
 print("GO! Bot is running!")
 
 while True:
-    message = input("")
+    message = input("").strip()
+    if not message:
+        print("Please enter something!")
+        continue
+    if message.lower() in ["exit", "quit"]:
+        print("Goodbye!")
+        break
     ints = predict_class(message)
-    res = get_response(ints, intents)
-    print(res)
+    if not ints:
+        print("I don't understand that. Please try again.")
+        continue
+    else:
+        res = get_response(ints, intents)
+        print(res)
