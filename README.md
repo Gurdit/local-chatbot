@@ -15,12 +15,12 @@ Welcome to your personal learning journey to create a simple, private, and intel
       - [Install NumPy](docs/numpy.md)
       - [Install TensorFlow with pip](docs/tensorflow.md)
       - [Natural Language Toolkit (NLTK)](docs/nltk.md)
-    - [Import & Initialize](#4-import--initialize)
-    - [Create Training Data](#5-create-training-data)
-    - [Design the Neural Network Model](#6-design-the-neural-network-model)
-    - [Implement chatbot.py](#7-implement-chatbotpy)
-    - [Run the Chatbot](#8-run-the-chatbot)
-4. [Usage & License](#9-usage--license)
+    - [Import & Initialize](docs/import_initialize.md)
+    - [Create Training Data](docs/create_traning_data.md)
+    - [Design the Neural Network Model](docs/design_the_neural_network_model.md)
+    - [Implement chatbot.py](docs/implement_chatbotpy.md)
+    - [Run the Chatbot](docs/run_the_chatbot.md)
+4. [Usage & License](#-usage--license)
 5. [Learning Resources](#learning-resources)
 6. [Next Steps & Advanced Ideas](#next-steps--advanced-ideas)  
 7. [Credits & Resources](#credits--resources)
@@ -35,7 +35,7 @@ This mini project helps you build a local chatbot using Python.
 
 ## ✅ Prerequisites
 
-- Python 3.8+
+- Python 3.12
 - Basic Python skills
 - Internet connection (for downloading models)
 - Optional: Git, VS Code, Linux/macOS terminal familiarity
@@ -45,7 +45,7 @@ This mini project helps you build a local chatbot using Python.
 ## 📚 Learning Resources
 
 - 📄 [How to Set Up a Python Virtual Environment](docs/setup_virtualenv.md)
-- 📄 [Understanding `intents.json`](docs/intents_json.md)
+- 📄 [Code Explanation ](docs/code_explanation.md)
 
 ---
 
